@@ -29,3 +29,38 @@ header {
         align-items: center;
     }
 }
+
+#musicSection {
+
+
+    & .music {
+        display: flex;
+    
+        & .infoMusic {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            & p {
+                font-weight: bold;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+#vinilCoracao {
+    width: 90px;
+    animation: rodar 2.5s linear infinite;
+}
+
+@keyframes rodar {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
