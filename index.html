@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style/style.css">
+    <script defer src="js/script.js"></script>
     <title>.</title>
 </head>
 
@@ -31,16 +32,19 @@
 
             <div class="infoMusic">
                 <p>Everyday - A$AP Rocky</p>
-                <nav id="iconsMusicRow">
-                    <i class='bx  bxs-skip-previous'></i>
-                    <i class='bx  bxs-play'></i>
-                    <i class='bx  bxs-pause'></i>
-                    <i class='bx  bxs-skip-next'></i>
-                </nav>
 
-                <audio controls>
+                <audio controls id="musica">
                     <source src="assets/audio/A$AP Rocky - Everyday (Official Audio) ft. Rod Stewart, Miguel, Mark Ronson.mp3" type="audio/mpeg">
                 </audio>
+
+                <input type="range" value="0" id="progresso">
+
+                <nav id="iconsMusicRow">
+                    <i class='bx  bxs-skip-previous' ></i>
+                    <i class='bx  bxs-play' id="controlIcon" onclick="playPause()"></i>
+                    <i class='bx  bxs-skip-next' ></i>
+                </nav>
+
 
             </div>
 
