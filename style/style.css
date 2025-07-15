@@ -32,6 +32,9 @@ header {
 
 #musicSection {
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     & .music {
         display: flex;
