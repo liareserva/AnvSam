@@ -27,7 +27,9 @@ function playPause () {
 } */
 
 progresso.addEventListener('input', function() {
-    let x = progresso.value;
+     const min = progresso.min || 0;
+    const max = progresso.max || 100;
+    const x = ((progresso.value - min) / (max - min)) * 100;
     let cor = 'linear-gradient(90deg, rgb(209, 209, 209)' + x + '%, rgb(69, 69, 69)' + x + '%)';
 
     progresso.style.background = cor;
