@@ -10,16 +10,13 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-    padding: 40px;
-}
-
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 22vh;
+
+    margin: 30px 0px 30px 0px;
 
     & img {
         width: 53px;
@@ -42,10 +39,13 @@ header {
 
 #musicSection {
 
-
-
+    display: flex;
+    
     & .music {
         display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
 
         & .infoMusic {
             display: flex;
@@ -56,8 +56,8 @@ header {
             & p {
                 color: var(--vinho);
                 font-weight: bold;
-                font-size: 20px;
-                margin-bottom: 10px;
+                font-size: 18px;
+                margin-bottom: 13px;
             }
         }
     }
@@ -75,9 +75,8 @@ header {
 }
 
 #vinilCoracao {
-    width: 90px;
-    height: 90px;
-    margin-right: 12px;
+    width: 85px;
+    height: 85px;
     animation: rodar 2.5s linear infinite;
 }
 
@@ -93,14 +92,17 @@ header {
 
 #progresso {
     -webkit-appearance: none;
+    appearance: none;
     width: 100%;
     height: 0.28em;
+    margin-bottom: 12px;
     border-radius: 100px;
-    background-color: var(--cinza);
+    background: linear-gradient(90deg,rgb(69, 69, 69) 60%, rgb(69, 69, 69) 60%);
 }
 
 #progresso::-webkit-slider-thumb {
     -webkit-appearance: none;
+    appearance: none;
     width: 22px;
     height: 22px;
     background-size: cover;
@@ -108,9 +110,6 @@ header {
     background-image: url('../assets/imgs/coracaoMinecraft.png');
 }
 
-#progresso::-webkit-progress-value {
-    background-color: #454545;
-}
 
 audio {
     display: none;

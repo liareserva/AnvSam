@@ -21,7 +21,14 @@ function playPause () {
     }
 };
 
-function corBarra () {
+/* function corBarra () {
     let valor = (progresso.value / progresso.max) * 100;
     progresso.style.background = '#454545';
-}
+} */
+
+progresso.addEventListener('input', function() {
+    let x = progresso.value;
+    let cor = 'linear-gradient(90deg, rgb(209, 209, 209)' + x + '%, rgb(69, 69, 69)' + x + '%)';
+
+    progresso.style.background = cor;
+});
