@@ -34,13 +34,49 @@ progresso.addEventListener('input', function () {
 
 
 function mudarLetra(idImg, arrayImg, intervalo = 1000) {
-    
+
     let indexAtual = 0;
-    
+    const img = document.getElementById(idImg);
+
     setInterval(() => {
-        document.getElementById(idImg).src = arrayImg[indexAtual];
-        indexAtual++;
+        let imgIndexada = arrayImg[indexAtual];
+        img.src = imgIndexada;
+
+        const nomeArquivoShort = imgIndexada.split('/').pop();
         
+        //M
+        if(nomeArquivoShort === 'm2.png') {
+            img.style.marginTop = '12px';
+            img.style.width = '40px';
+        } else if (nomeArquivoShort === 'm3.png') {
+            img.style.width = '30px';
+        } else if (nomeArquivoShort === 'm1.png') {
+            img.style.marginBottom = '10px';
+            img.style.width = '38px';
+        }
+
+        //E
+        if(nomeArquivoShort === 'e1.png') {
+            img.style.width = '27px'
+        } else if (nomeArquivoShort === 'e2.png') {
+            img.style.width = '29px';
+        } else if (nomeArquivoShort === 'e3.png') {
+            img.style.width = '30px';
+        }
+
+        //U
+        if(nomeArquivoShort === 'u1.png') {
+            img.style.width = '25px';
+        } else if (nomeArquivoShort === 'u2.png') {
+            img.style.width = '30px';
+        } else if (nomeArquivoShort === 'u3.png') {
+            img.style.width = '35px';
+        }
+
+        
+
+        indexAtual++;
+
         if (indexAtual >= arrayImg.length) {
             indexAtual = 0;
         }
@@ -62,3 +98,15 @@ const letrasO = ['../assets/imgs/letras/O/o1.png', '../assets/imgs/letras/O/o2.p
 mudarLetra('o1', letrasO, 1000);
 const letrasR = ['../assets/imgs/letras/R/r1.png', '../assets/imgs/letras/R/r2.png', '../assets/imgs/letras/R/r3.png'];
 mudarLetra('r1', letrasR, 1000);
+
+
+/* function widthDef (idImg, imagem, pixels) {
+    const id = document.getElementById(idImg);
+    if (id.src.includes(imagem)) {
+    id.style.width = pixels;
+}
+};
+
+widthDef('m1', 'm2.png', '1200px');
+widthDef('e1', 'e2.png', '1200px'); */
+

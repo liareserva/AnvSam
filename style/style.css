@@ -117,21 +117,18 @@ audio {
 
 .ma {
     display: flex;
+    width: 100%;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
 
     & .meu,
     & .amor {
         display: flex;
         align-items: center;
+        width: 100%;
+        margin: 0px 10px 0px 10px;
 
         & img {
             width: 35px;
         }
     }
-}
-
-img[src$="m2.png"] {
-    width: 120px;
 }
