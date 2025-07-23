@@ -9,7 +9,7 @@ musica.onloadedmetadata = function () {
 };
 
 
-function playPause () {
+function playPause() {
     if (btnMusic.classList.contains('bxs-pause')) {
         musica.pause();
         btnMusic.classList.remove('bxs-pause');
@@ -21,16 +21,44 @@ function playPause () {
     }
 };
 
-/* function corBarra () {
-    let valor = (progresso.value / progresso.max) * 100;
-    progresso.style.background = '#454545';
-} */
 
-progresso.addEventListener('input', function() {
-     const min = progresso.min || 0;
+
+progresso.addEventListener('input', function () {
+    const min = progresso.min || 0;
     const max = progresso.max || 100;
     const x = ((progresso.value - min) / (max - min)) * 100;
     let cor = 'linear-gradient(90deg, rgb(209, 209, 209)' + x + '%, rgb(69, 69, 69)' + x + '%)';
 
     progresso.style.background = cor;
 });
+
+
+function mudarLetra(idImg, arrayImg, intervalo = 1000) {
+    
+    let indexAtual = 0;
+    
+    setInterval(() => {
+        document.getElementById(idImg).src = arrayImg[indexAtual];
+        indexAtual++;
+        
+        if (indexAtual >= arrayImg.length) {
+            indexAtual = 0;
+        }
+    }, intervalo);
+}
+
+const letrasM = ['../assets/imgs/letras/M/m1.png', '../assets/imgs/letras/M/m2.png', '../assets/imgs/letras/M/m3.png'];
+mudarLetra('m1', letrasM, 1000);
+const letrasE = ['../assets/imgs/letras/E/e1.png', '../assets/imgs/letras/E/e2.png', '../assets/imgs/letras/E/e3.png'];
+mudarLetra('e1', letrasE, 1000);
+const letrasU = ['../assets/imgs/letras/U/u1.png', '../assets/imgs/letras/U/u2.png', '../assets/imgs/letras/U/u3.png'];
+mudarLetra('u1', letrasU, 1000);
+
+const letrasA = ['../assets/imgs/letras/A/a1.png', '../assets/imgs/letras/A/a2.png', '../assets/imgs/letras/A/a3.png'];
+mudarLetra('a1', letrasA, 1000);
+const letrasM2 = ['../assets/imgs/letras/M/m4.png', '../assets/imgs/letras/M/m5.png', '../assets/imgs/letras/M/m6.png'];
+mudarLetra('m2', letrasM2, 1000);
+const letrasO = ['../assets/imgs/letras/O/o1.png', '../assets/imgs/letras/O/o2.png', '../assets/imgs/letras/O/o3.png'];
+mudarLetra('o1', letrasO, 1000);
+const letrasR = ['../assets/imgs/letras/R/r1.png', '../assets/imgs/letras/R/r2.png', '../assets/imgs/letras/R/r3.png'];
+mudarLetra('r1', letrasR, 1000);

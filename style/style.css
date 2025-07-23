@@ -114,3 +114,24 @@ header {
 audio {
     display: none;
 }
+
+.ma {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    & .meu,
+    & .amor {
+        display: flex;
+        align-items: center;
+
+        & img {
+            width: 35px;
+        }
+    }
+}
+
+img[src$="m2.png"] {
+    width: 120px;
+}
