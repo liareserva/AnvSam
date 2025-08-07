@@ -21,6 +21,19 @@ function playPause() {
     };
 };
 
+if (musica.play()) {
+    setInterval(() => {
+        progresso.value = musica.currentTime;
+    }, 505)
+}
+
+progresso.onchange = function () {
+    musica.play();
+    musica.currentTime = progresso.value;
+    btnMusic.classList.add('bxs-pause');
+    btnMusic.classList.remove('bxs-play');
+}
+
 
 
 progresso.addEventListener('input', function () {
@@ -33,84 +46,19 @@ progresso.addEventListener('input', function () {
 });
 
 
-/* function mudarLetra(idImg, arrayImg, intervalo = 1000) {
-
-    let indexAtual = 0;
-    const img = document.getElementById(idImg);
-
-    setInterval(() => {
-        let imgIndexada = arrayImg[indexAtual];
-        img.src = imgIndexada;
-
-        const nomeArquivoShort = imgIndexada.split('/').pop();
-        
-        //M
-        if(nomeArquivoShort === 'm2.png') {
-            img.style.marginTop = '12px';
-            img.style.width = '40px';
-        } else if (nomeArquivoShort === 'm3.png') {
-            img.style.width = '30px';
-        } else if (nomeArquivoShort === 'm1.png') {
-            img.style.marginBottom = '10px';
-            img.style.width = '38px';
-        }
-
-        //E
-        if(nomeArquivoShort === 'e1.png') {
-            img.style.width = '27px'
-        } else if (nomeArquivoShort === 'e2.png') {
-            img.style.width = '29px';
-        } else if (nomeArquivoShort === 'e3.png') {
-            img.style.width = '30px';
-        }
-
-        //U
-        if(nomeArquivoShort === 'u1.png') {
-            img.style.width = '25px';
-        } else if (nomeArquivoShort === 'u2.png') {
-            img.style.width = '30px';
-        } else if (nomeArquivoShort === 'u3.png') {
-            img.style.width = '35px';
-        }
-
-        
-
-        indexAtual++;
-
-        if (indexAtual >= arrayImg.length) {
-            indexAtual = 0;
-        }
-    }, intervalo);
-}; */
-
-/* function mudarLetra(idImg, nomeArquivo) {
-
-    let id = document.getElementById(idImg);
-    document.getElementById(idImg).innerHTML = nomeArquivo;
-
-    setInterval(() => {
-        if (id.innerHTML.includes('2')) {
-            
-        }
-        
-    }, 1000);
-
-} */
-
-
 
 function hiddenLetter(classe) {
     let imagens = document.querySelectorAll(`.${classe}`);
     let contagem = 0;
-    
+
     setInterval(() => {
-        
+
         imagens.forEach((img) => {
             img.classList.add('hidden');
         });
         imagens[contagem].classList.remove('hidden');
         contagem = (contagem + 1) % imagens.length;
-        
+
     }, 1000);
 }
 
