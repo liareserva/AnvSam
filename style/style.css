@@ -168,6 +168,7 @@ audio {
 #numbers {
     margin-top: 30px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -175,14 +176,23 @@ audio {
 
 #num9 {
     position: absolute;
-    top: 50px;
-    left: 205px;
+    top: 35px;
+    left: 190px;
     width: 70px;
 }
 
 #num1 {
     width: 67px;
-    margin-right: 30px;
+    margin-right: 50px;
+}
+
+.anus {
+    display: flex;
+    margin-right: 95px;
+
+    & img {
+        width: 30px;
+    }
 }
 
 #televisoes {
