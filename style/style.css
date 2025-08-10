@@ -176,26 +176,43 @@ audio {
 
 #ele {
     width: 250px;
+    position: absolute;
+    top: 0px;
+    right: 125px;
+    animation: mexerCabeca 0.75s infinite ease-in-out;
+}
+
+@keyframes mexerCabeca {
+    0% {
+        transform: rotate(-27deg);
+    }
+    50% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(-27deg);
+    }
 }
 
 #num9 {
     position: absolute;
-    top: 35px;
-    left: 190px;
+    top: 145px;
+    left: 185px;
     width: 70px;
 }
 
 #num1 {
     width: 67px;
+    margin-top: 100px;
     margin-right: 50px;
 }
 
 .anus {
     display: flex;
-    margin-right: 95px;
-
+    margin-left: 20px;
+    margin-top: 45px;
     & img {
-        width: 30px;
+        width: 35px;
     }
 }
 
