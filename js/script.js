@@ -105,6 +105,24 @@ function nextMusic() {
         musicaIndex++;
         musicaAtual = musicaIndex;
 
+        audio.textContent = musicas[musicaAtual].src;
+        nomeMusica.textContent = musicas[musicaAtual].nome;
+
+        playPause();
+}
+
+function previousMusic() {
+    let musicaIndex = 0;
+    let audio = document.getElementById('musica');
+    const nomeMusica = document.getElementById('nameMusic');
+
+    const btnAnterior = document.getElementById('antIcon');
+
+    musicaIndex = 0;
+
+        musicaIndex--;
+        musicaAtual = musicaIndex;
+
         audio.src = musicas[musicaAtual].src;
         nomeMusica.textContent = musicas[musicaAtual].nome;
 
