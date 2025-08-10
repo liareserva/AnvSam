@@ -18,6 +18,8 @@ function playPause() {
         btnMusic.classList.add('bxs-play');
 
         vinilCoracao.classList.remove('rodando');
+        vinilPararRodar();
+
     } else {
         musica.play();
         btnMusic.classList.add('bxs-pause');
@@ -26,6 +28,11 @@ function playPause() {
         vinilCoracao.classList.add('rodando');
     };
 };
+
+function vinilPararRodar() {
+    vinilCoracao.style.animation = 'none';
+    vinilCoracao.offsetHeight;
+}
 
 musica.addEventListener('timeupdate', () => {
     progresso.value = musica.currentTime;
