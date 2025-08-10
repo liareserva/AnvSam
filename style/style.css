@@ -164,3 +164,51 @@ audio {
 .hidden {
     display: none;
 }
+
+#televisoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+
+    background-color: var(--vinho_1);
+}
+
+#photos {
+    display: flex;
+}
+
+ul {
+    list-style: none;
+}
+
+.photo img{
+    position: absolute;
+    content: '';
+    width: 150px;
+    height: 145px;
+    top: 400px;
+    left: 125px;
+}
+
+#tvtubinho {
+    position: relative;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tv {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+
+    & #prevImgIcon,
+    & #nextImgIcon {
+        font-size: 50px;
+        color: var(--cinza);
+    }
+}
