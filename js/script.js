@@ -1,5 +1,6 @@
 let musica = document.getElementById('musica');
 let btnMusic = document.getElementById('controlIcon');
+let btnMusicPause = document.getElementById('pauseIcon');
 let progresso = document.getElementById('progresso');
 
 musica.onloadedmetadata = function () {
@@ -21,28 +22,23 @@ function playPause() {
     };
 };
 
-if (musica.play()) {
-    setInterval(() => {
-        progresso.value = musica.currentTime;
-    }, 505)
-}
-
-progresso.onchange = function () {
-    musica.play();
-    musica.currentTime = progresso.value;
-    btnMusic.classList.add('bxs-pause');
-    btnMusic.classList.remove('bxs-play');
-}
-
-
-
-progresso.addEventListener('input', function () {
+musica.addEventListener('timeupdate', () => {
+    progresso.value = musica.currentTime;
     const min = progresso.min || 0;
     const max = progresso.max || 100;
     const x = ((progresso.value - min) / (max - min)) * 100;
     let cor = 'linear-gradient(90deg, rgb(209, 209, 209)' + x + '%, rgb(136, 136, 136)' + x + '%)';
-
+    
     progresso.style.background = cor;
+});
+
+//coloca a musica quando clicar em certa parte
+progresso.onchange = function () {
+    musica.currentTime = progresso.value;
+}
+
+
+progresso.addEventListener('input', function () {
 });
 
 
