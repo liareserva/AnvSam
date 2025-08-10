@@ -38,6 +38,10 @@ header {
         letter-spacing: 0.6rem;
     }
 
+    & .happybirthday {
+        margin-bottom: 7px;
+    }
+
     & .happyLetter,
     .birthdayLetter {
         display: flex;
@@ -64,6 +68,7 @@ header {
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            margin-right: 20px;
 
             & p {
                 color: #fff;
