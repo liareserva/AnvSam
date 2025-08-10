@@ -165,6 +165,26 @@ audio {
     display: none;
 }
 
+#numbers {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#num9 {
+    position: absolute;
+    top: 50px;
+    left: 205px;
+    width: 70px;
+}
+
+#num1 {
+    width: 67px;
+    margin-right: 30px;
+}
+
 #televisoes {
     display: flex;
     justify-content: center;
@@ -183,12 +203,12 @@ ul {
     list-style: none;
 }
 
-.photo img{
+.photo img {
     position: absolute;
     content: '';
     width: 150px;
     height: 145px;
-    top: 400px;
+    bottom: 590px;
     left: 125px;
 }
 
@@ -211,5 +231,28 @@ ul {
         font-size: 50px;
         color: var(--cinza);
         cursor: pointer;
+    }
+}
+
+
+@media screen and (max-width: 360px) {
+    .photo img {
+        position: absolute;
+        content: '';
+        width: 150px;
+        height: 145px;
+        top: 590px;
+        left: 110px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .photo img {
+        position: absolute;
+        content: '';
+        width: 150px;
+        height: 145px;
+        top: 400px;
+        left: 103px;
     }
 }
