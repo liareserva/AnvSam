@@ -2,6 +2,7 @@ let musica = document.getElementById('musica');
 let btnMusic = document.getElementById('controlIcon');
 let btnMusicPause = document.getElementById('pauseIcon');
 let progresso = document.getElementById('progresso');
+let vinilCoracao = document.getElementById('vinilCoracao');
 
 musica.onloadedmetadata = function () {
     progresso.max = musica.duration;
@@ -14,11 +15,15 @@ function playPause() {
     if (btnMusic.classList.contains('bxs-pause')) {
         musica.pause();
         btnMusic.classList.remove('bxs-pause');
-        btnMusic.classList.add('bxs-play')
+        btnMusic.classList.add('bxs-play');
+
+        vinilCoracao.classList.remove('rodando');
     } else {
         musica.play();
         btnMusic.classList.add('bxs-pause');
         btnMusic.classList.remove('bxs-play');
+        
+        vinilCoracao.classList.add('rodando');
     };
 };
 
@@ -36,12 +41,6 @@ musica.addEventListener('timeupdate', () => {
 progresso.onchange = function () {
     musica.currentTime = progresso.value;
 }
-
-
-progresso.addEventListener('input', function () {
-});
-
-
 
 function hiddenLetter(classe) {
     let imagens = document.querySelectorAll(`.${classe}`);

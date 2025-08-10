@@ -90,6 +90,9 @@ header {
 #vinilCoracao {
     width: 110px;
     height: 110px;
+}
+
+#vinilCoracao.rodando {
     animation: rodar 2.5s linear infinite;
 }
 
