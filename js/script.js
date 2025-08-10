@@ -98,8 +98,6 @@ function nextMusic() {
     let audio = document.getElementById('musica');
     const nomeMusica = document.getElementById('nameMusic');
 
-    const btnProximo = document.getElementById('proxIcon');
-
     musicaIndex = 0;
 
         musicaIndex++;
@@ -112,13 +110,10 @@ function nextMusic() {
 }
 
 function previousMusic() {
-    let musicaIndex = 0;
     let audio = document.getElementById('musica');
     const nomeMusica = document.getElementById('nameMusic');
 
-    const btnAnterior = document.getElementById('antIcon');
-
-    musicaIndex = 0;
+    musicaIndex = musicas.length - 1;
 
         musicaIndex--;
         musicaAtual = musicaIndex;
