@@ -210,5 +210,6 @@ ul {
     & #nextImgIcon {
         font-size: 50px;
         color: var(--cinza);
+        cursor: pointer;
     }
 }

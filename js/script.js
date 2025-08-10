@@ -100,14 +100,14 @@ function nextMusic() {
 
     musicaIndex = 0;
 
-        musicaIndex++;
-        musicaAtual = musicaIndex;
+    musicaIndex++;
+    musicaAtual = musicaIndex;
 
-        audio.textContent = musicas[musicaAtual].src;
-        nomeMusica.textContent = musicas[musicaAtual].nome;
+    audio.textContent = musicas[musicaAtual].src;
+    nomeMusica.textContent = musicas[musicaAtual].nome;
 
-        playPause();
-}
+    playPause();
+};
 
 function previousMusic() {
     let audio = document.getElementById('musica');
@@ -115,14 +115,44 @@ function previousMusic() {
 
     musicaIndex = musicas.length - 1;
 
-        musicaIndex--;
-        musicaAtual = musicaIndex;
+    musicaIndex--;
+    musicaAtual = musicaIndex;
 
-        audio.src = musicas[musicaAtual].src;
-        nomeMusica.textContent = musicas[musicaAtual].nome;
+    audio.src = musicas[musicaAtual].src;
+    nomeMusica.textContent = musicas[musicaAtual].nome;
 
-        playPause();
-}
+    playPause();
+};
+
+
+
+    const imgsTv = [
+        {
+            src: 'assets/imgs/imgsTvCam/daviNoMar.jpg'
+        },
+
+        {
+            src: 'assets/imgs/imgsTvCam/daviAssistindoTV.jpg'
+        }
+    ];
+
+    let contagem = 0;
+    let img = document.getElementById('imgTv');
+    const btnProx = document.getElementById('nextImgIcon');
+
+    function mostrarImg(index) {
+        img.src = imgsTv[index].src;
+    }
+
+    mostrarImg(contagem);
+
+    btnProx.addEventListener('click', () => {
+        contagem++;
+        if (contagem >= imgsTv.length) {
+            contagem = 0;
+        }
+        mostrarImg(contagem);
+    });
 
 
 
