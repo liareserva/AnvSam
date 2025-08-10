@@ -141,6 +141,7 @@ audio {
     & .amor {
         display: flex;
         align-items: center;
+        /* border: 2px solid black; */
 
         & img {
             width: 35px;

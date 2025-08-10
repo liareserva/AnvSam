@@ -1,0 +1,62 @@
+.mLetter, 
+.eLetter,
+.uLetter,
+.aLetter,
+.oLetter,
+.rLetter {
+    max-height: 40px;
+    min-width: 20px;
+}
+
+#m1 {
+    width: 38px;
+}
+
+#m2 {
+    width: 48px;
+}
+
+#m3 {
+    width: 20px;
+}
+
+#e1 {
+    width: 30px;
+}
+
+#u1 {
+    width: 29px;
+}
+
+#u3 {
+    width: 43px;
+}
+
+#a2 {
+    width: 38px;
+}
+#m2 {
+    width: 45px;
+}
+
+#m3 {
+    width: 45px;
+}
+
+#o3 {
+    width: 45px;
+}
+
+#r1 {
+    width: 30px;
+}
+
+#r2 {
+    width: 30px;
+}
+
+#r3 {
+    width: 40px;
+}
+
+
