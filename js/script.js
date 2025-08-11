@@ -229,7 +229,7 @@ btnPrev.addEventListener('click', () => {
     if (contagem >= imgsTv.length) {
         contagem = 0;
     } else if (contagem < 0) {
-        contagem = imgsTv.length;
+        contagem = imgsTv.length - 1;
     }
     mostrarImg(contagem);
 });
