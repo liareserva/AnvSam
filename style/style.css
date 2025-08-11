@@ -1,0 +1,289 @@
+:root {
+    --vinho: #4f0000;
+    --vinho_1: #900c0c;
+    --corCoracaoVinil: #D10000;
+    --cinza: #d1d1d1;
+    --verdeBB: #014A36;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #FFFF;
+
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+
+    margin: 30px 0px 30px 0px;
+
+    & img {
+        width: 45px;
+        margin-right: 0.6rem;
+    }
+
+    & span {
+        font-weight: 600;
+        font-size: 43px;
+        letter-spacing: 0.6rem;
+    }
+
+    & .happybirthday {
+        margin-bottom: 7px;
+    }
+
+    & .happyLetter,
+    .birthdayLetter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#musicSection {
+
+    display: flex;
+    background-color: var(--vinho_1);
+    width: 100%;
+    height: 115px;
+
+    & .music {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+
+        & .infoMusic {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+
+            & p {
+                color: #fff;
+                letter-spacing: 0.13em;
+                font-weight: bold;
+                font-size: 16px;
+                margin-bottom: 13px;
+            }
+        }
+    }
+}
+
+#iconsMusicRow {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+
+    & i {
+        font-size: 25px;
+        color: #fff;
+    }
+}
+
+#vinilCoracao {
+    width: 110px;
+    height: 110px;
+}
+
+#vinilCoracao.rodando {
+    animation: rodar 2.5s linear infinite;
+}
+
+@keyframes rodar {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#progresso {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 0.28em;
+    margin-bottom: 12px;
+    border-radius: 100px;
+    border: none;
+    background: linear-gradient(90deg, rgb(136, 136, 136) 60%, rgb(136, 136, 136) 60%);
+}
+
+#progresso::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../assets/imgs/coracaoMinecraft.png');
+}
+
+
+audio {
+    display: none;
+}
+
+.ma {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    margin-top: 7px;
+    align-items: center;
+    justify-content: space-evenly;
+
+    & .meu,
+    & .amor {
+        display: flex;
+        align-items: center;
+        /* border: 2px solid black; */
+
+        & img {
+            width: 35px;
+        }
+    }
+}
+
+.meu {
+    margin-left: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+#numbers {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#ele {
+    width: 250px;
+    position: absolute;
+    top: 0px;
+    right: 125px;
+    animation: mexerCabeca 0.75s infinite ease-in-out;
+}
+
+@keyframes mexerCabeca {
+    0% {
+        transform: rotate(-27deg);
+    }
+    50% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(-27deg);
+    }
+}
+
+#num9 {
+    position: absolute;
+    top: 145px;
+    left: 185px;
+    width: 70px;
+}
+
+#num1 {
+    width: 67px;
+    margin-top: 100px;
+    margin-right: 50px;
+}
+
+.anus {
+    display: flex;
+    margin-left: 20px;
+    margin-top: 45px;
+    & img {
+        width: 35px;
+    }
+}
+
+#televisoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+
+    background-color: var(--vinho_1);
+}
+
+#photos {
+    display: flex;
+}
+
+ul {
+    list-style: none;
+}
+
+.photo img {
+    position: absolute;
+    content: '';
+    width: 150px;
+    height: 145px;
+    bottom: 590px;
+    left: 125px;
+}
+
+#tvtubinho {
+    position: relative;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tv {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+
+    & #prevImgIcon,
+    & #nextImgIcon {
+        font-size: 50px;
+        color: var(--cinza);
+        cursor: pointer;
+    }
+}
+
+
+@media screen and (max-width: 360px) {
+    .photo img {
+        position: absolute;
+        content: '';
+        width: 150px;
+        height: 145px;
+        top: 590px;
+        left: 110px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .photo img {
+        position: absolute;
+        content: '';
+        width: 150px;
+        height: 145px;
+        top: 400px;
+        left: 103px;
+    }
+}
