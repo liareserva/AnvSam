@@ -108,35 +108,51 @@ const musicas = [
     }
 ];
 
-let musicaIndex = 0;
+/* let musicaIndex = 0;
 let musicaAtual = 0;
 
+let audio = document.getElementById('musica');
+const nomeMusica = document.getElementById('nameMusic');
 function nextMusic() {
 
-    let audio = document.getElementById('musica');
-    const nomeMusica = document.getElementById('nameMusic');
 
-    musicaIndex = (musicaIndex + 1) % musicas.length;
+    musicaIndex++;
     musicaAtual = musicaIndex;
 
-    audio.src = musicas[musicaAtual].src;
+    audio.textContent = musicas[musicaAtual].src;
     nomeMusica.textContent = musicas[musicaAtual].nome;
 
     playPause();
 };
 
 function previousMusic() {
-    let audio = document.getElementById('musica');
-    const nomeMusica = document.getElementById('nameMusic');
 
-    musicaIndex = (musicaIndex - 1 + musicas.length) % musicas.length;
+    musicaIndex--;
     musicaAtual = musicaIndex;
 
-    audio.src = musicas[musicaAtual].src;
+    audio.textContent = musicas[musicaAtual].src;
     nomeMusica.textContent = musicas[musicaAtual].nome;
 
     playPause();
-};
+}; */
+
+let musicaIndex = 0;
+let audio = document.getElementById('musica');
+const nomeMusica = document.getElementById('nameMusic');
+
+function nextMusic() {
+    musicaIndex = (musicaIndex + 1) % musicas.length; // avança e volta pro início se passar do fim
+    audio.textContent = musicas[musicaIndex].src;
+    nomeMusica.textContent = musicas[musicaIndex].nome;
+    playPause();
+}
+
+function previousMusic() {
+    musicaIndex = (musicaIndex - 1 + musicas.length) % musicas.length; // volta e vai pro final se for menor que 0
+    audio.src = musicas[musicaIndex].src;
+    nomeMusica.textContent = musicas[musicaIndex].nome;
+    playPause();
+}
 
 
 
