@@ -80,6 +80,53 @@ hiddenLetter('rLetter');
 
 
 
+
+/* let musicaIndex = 0;
+let musicaAtual = 0;
+
+let audio = document.getElementById('musica');
+const nomeMusica = document.getElementById('nameMusic');
+function nextMusic() {
+    
+
+musicaIndex++;
+musicaAtual = musicaIndex;
+
+audio.textContent = musicas[musicaAtual].src;
+nomeMusica.textContent = musicas[musicaAtual].nome;
+
+playPause();
+};
+
+function previousMusic() {
+    
+musicaIndex--;
+musicaAtual = musicaIndex;
+
+audio.textContent = musicas[musicaAtual].src;
+nomeMusica.textContent = musicas[musicaAtual].nome;
+
+playPause();
+}; */
+
+/* let musicaIndex = 0;
+let audio = document.getElementById('musica');
+const nomeMusica = document.getElementById('nameMusic');
+
+function nextMusic() {
+    musicaIndex = (musicaIndex + 1) % musicas.length; // avança e volta pro início se passar do fim
+    audio.textContent = musicas[musicaIndex].src;
+    nomeMusica.textContent = musicas[musicaIndex].nome;
+    playPause();
+    }
+    
+    function previousMusic() {
+        musicaIndex = (musicaIndex - 1 + musicas.length) % musicas.length; // volta e vai pro final se for menor que 0
+        audio.src = musicas[musicaIndex].src;
+        nomeMusica.textContent = musicas[musicaIndex].nome;
+        playPause();
+        }
+        */
 const musicas = [
 
     {
@@ -108,18 +155,18 @@ const musicas = [
     }
 ];
 
-/* let musicaIndex = 0;
+let audio = document.getElementById('musica');
+let nomeMusica = document.getElementById('nameMusic');
+let audioSource = document.getElementById('musicsource');
+
+let musicaIndex = 0;
 let musicaAtual = 0;
 
-let audio = document.getElementById('musica');
-const nomeMusica = document.getElementById('nameMusic');
 function nextMusic() {
-
-
     musicaIndex++;
     musicaAtual = musicaIndex;
 
-    audio.textContent = musicas[musicaAtual].src;
+    audio.src = musicas[musicaAtual].src;
     nomeMusica.textContent = musicas[musicaAtual].nome;
 
     playPause();
@@ -127,34 +174,14 @@ function nextMusic() {
 
 function previousMusic() {
 
-    musicaIndex--;
+    musicaIndex = (musicaIndex + 1) % musicas.length;
     musicaAtual = musicaIndex;
 
-    audio.textContent = musicas[musicaAtual].src;
+    audio.src = musicas[musicaAtual].src;
     nomeMusica.textContent = musicas[musicaAtual].nome;
 
     playPause();
-}; */
-
-let musicaIndex = 0;
-let audio = document.getElementById('musica');
-const nomeMusica = document.getElementById('nameMusic');
-
-function nextMusic() {
-    musicaIndex = (musicaIndex + 1) % musicas.length; // avança e volta pro início se passar do fim
-    audio.textContent = musicas[musicaIndex].src;
-    nomeMusica.textContent = musicas[musicaIndex].nome;
-    playPause();
 }
-
-function previousMusic() {
-    musicaIndex = (musicaIndex - 1 + musicas.length) % musicas.length; // volta e vai pro final se for menor que 0
-    audio.src = musicas[musicaIndex].src;
-    nomeMusica.textContent = musicas[musicaIndex].nome;
-    playPause();
-}
-
-
 
 const imgsTv = [
     {
