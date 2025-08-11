@@ -81,9 +81,25 @@ hiddenLetter('rLetter');
 
 
 const musicas = [
+
+    {
+        src: '../assets/audio/Feliz Aniversário - Parabéns pra Você [WQzWFU_IKR4].mp3',
+        nome: 'Feliz aniversário - Parabéns para Você'
+    },
+
     {
         src: '../assets/audio/A$AP Rocky - Everyday (Official Audio) ft. Rod Stewart, Miguel, Mark Ronson.mp3',
         nome: 'Everyday - A$AP Rocky'
+    },
+
+    {
+        src: '../assets/audio/Patati Patatá - Parabéns (DVD No Castelo da fantasia) [U6GqHqVYZwE].mp3',
+        nome: 'Patati Patatá - Parabéns'
+    },
+
+    {
+        src: 'assets/audio/Love Sosa [ha8Z72fs27I].mp3',
+        nome: 'Love Sosa - Chief Keef'
     },
 
     {
@@ -92,18 +108,18 @@ const musicas = [
     }
 ];
 
+let musicaIndex = 0;
+let musicaAtual = 0;
+
 function nextMusic() {
 
-    let musicaIndex = 0;
     let audio = document.getElementById('musica');
     const nomeMusica = document.getElementById('nameMusic');
 
-    musicaIndex = 0;
-
-    musicaIndex++;
+    musicaIndex = (musicaIndex + 1) % musicas.length;
     musicaAtual = musicaIndex;
 
-    audio.textContent = musicas[musicaAtual].src;
+    audio.src = musicas[musicaAtual].src;
     nomeMusica.textContent = musicas[musicaAtual].nome;
 
     playPause();
@@ -113,9 +129,7 @@ function previousMusic() {
     let audio = document.getElementById('musica');
     const nomeMusica = document.getElementById('nameMusic');
 
-    musicaIndex = musicas.length - 1;
-
-    musicaIndex--;
+    musicaIndex = (musicaIndex - 1 + musicas.length) % musicas.length;
     musicaAtual = musicaIndex;
 
     audio.src = musicas[musicaAtual].src;
@@ -126,33 +140,33 @@ function previousMusic() {
 
 
 
-    const imgsTv = [
-        {
-            src: 'assets/imgs/imgsTvCam/daviNoMar.jpg'
-        },
+const imgsTv = [
+    {
+        src: 'assets/imgs/imgsTvCam/daviNoMar.jpg'
+    },
 
-        {
-            src: 'assets/imgs/imgsTvCam/daviAssistindoTV.jpg'
-        }
-    ];
-
-    let contagem = 0;
-    let img = document.getElementById('imgTv');
-    const btnProx = document.getElementById('nextImgIcon');
-
-    function mostrarImg(index) {
-        img.src = imgsTv[index].src;
+    {
+        src: 'assets/imgs/imgsTvCam/daviAssistindoTV.jpg'
     }
+];
 
+let contagem = 0;
+let img = document.getElementById('imgTv');
+const btnProx = document.getElementById('nextImgIcon');
+
+function mostrarImg(index) {
+    img.src = imgsTv[index].src;
+}
+
+mostrarImg(contagem);
+
+btnProx.addEventListener('click', () => {
+    contagem++;
+    if (contagem >= imgsTv.length) {
+        contagem = 0;
+    }
     mostrarImg(contagem);
-
-    btnProx.addEventListener('click', () => {
-        contagem++;
-        if (contagem >= imgsTv.length) {
-            contagem = 0;
-        }
-        mostrarImg(contagem);
-    });
+});
 
 
 
