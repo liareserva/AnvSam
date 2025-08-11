@@ -29,10 +29,10 @@ function playPause() {
     };
 };
 
-function vinilPararRodar() {
+/* function vinilPararRodar() {
     vinilCoracao.style.animation = 'none';
     vinilCoracao.offsetHeight;
-}
+} */
 
 musica.addEventListener('timeupdate', () => {
     progresso.value = musica.currentTime;
@@ -169,6 +169,8 @@ function nextMusic() {
     audio.src = musicas[musicaAtual].src;
     nomeMusica.textContent = musicas[musicaAtual].nome;
 
+    btnMusic.classList.add('bxs-play');
+    btnMusicPause.classList.remove('bxs-pause');
     playPause();
 };
 
@@ -180,6 +182,8 @@ function previousMusic() {
     audio.src = musicas[musicaAtual].src;
     nomeMusica.textContent = musicas[musicaAtual].nome;
 
+    btnMusic.classList.add('bxs-play');
+    btnMusicPause.classList.remove('bxs-pause');
     playPause();
 }
 
