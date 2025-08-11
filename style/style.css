@@ -186,9 +186,11 @@ audio {
     0% {
         transform: rotate(-27deg);
     }
+
     50% {
         transform: rotate(-15deg);
     }
+
     100% {
         transform: rotate(-27deg);
     }
@@ -212,6 +214,7 @@ audio {
     margin-left: 20px;
     margin-top: 45px;
     margin-bottom: 10px;
+
     & img {
         width: 35px;
     }
