@@ -185,17 +185,26 @@ function previousMusic() {
 
 const imgsTv = [
     {
-        src: 'assets/imgs/imgsTvCam/daviNoMar.jpg'
-    },
-
-    {
         src: 'assets/imgs/imgsTvCam/daviAssistindoTV.jpg'
+    },
+    
+    {
+        src: 'assets/imgs/nois/coresclaras.png'
+    },
+    
+    {
+        src: 'assets/imgs/nois/coresescuras.png'
+    },
+    
+    {
+        src: 'assets/imgs/imgsTvCam/daviNoMar.jpg'
     }
 ];
 
 let contagem = 0;
 let img = document.getElementById('imgTv');
 const btnProx = document.getElementById('nextImgIcon');
+const btnPrev = document.getElementById('prevImgIcon');
 
 function mostrarImg(index) {
     img.src = imgsTv[index].src;
@@ -207,6 +216,16 @@ btnProx.addEventListener('click', () => {
     contagem++;
     if (contagem >= imgsTv.length) {
         contagem = 0;
+    }
+    mostrarImg(contagem);
+});
+
+btnPrev.addEventListener('click', () => {
+    contagem--;
+    if (contagem >= imgsTv.length) {
+        contagem = 0;
+    } else if (contagem < 0) {
+        contagem = imgsTv.length;
     }
     mostrarImg(contagem);
 });
