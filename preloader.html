@@ -4,13 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/carta.css">
+    <script defer src="js/carta.js"></script>
     <title>Atividade</title>
 </head>
 <body>
+
+    <div id="overlay">
+        <div class="popup">
+            <div class="title">
+                Deseja continuar?
+            </div>
+
+            <div class="botoes">
+                <button id="nao">Não</button>
+                <button id="sim"><a href="index.html">Sim</a></button>
+            </div>
+        </div>
+    </div>
+
      <section id="carta">
-        <div class="triangulo"></div>
-        <div class="retangulo"></div>
-        <img src="assets/imgs/carta/coracaopapel.png" alt="" id="coracaopapel">
+         <div id="retangulo"></div>
+        <div id="triangulo"></div>
+        <button id="coracaopapel"><img src="assets/imgs/carta/coracaopapel.png" alt="" ></button>
     </section>
+
 </body>
 </html>

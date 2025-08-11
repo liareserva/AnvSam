@@ -19,13 +19,14 @@
 
 body {
     background-color: var(--rosacoracao);
+    height: 100vh;
 }
 
 #carta {
     position: relative;
-    width: 100%;
     height: 50vh;
     transform: translate(25%, 75%);
+    /*     perspective: 800px; */
 
     & img {
         width: 30px;
@@ -37,21 +38,28 @@ body {
     }
 }
 
-.retangulo {
-    position: absolute;
-    content: '';
-    border-top: 100px solid #cb0606;
-    border-right: 100px solid transparent;
-    border-left: 100px solid transparent;
-}
-
-.triangulo {
+#retangulo {
     position: absolute;
     content: '';
     border-right: 100px solid var(--vinho02);
     border-left: 100px solid var(--vinho02);
     border-bottom: 53px solid #8f0d0d;
-    border-top: 80px solid transparent;
+    border-top: 80px solid #791010;
+}
+
+#triangulo {
+    position: absolute;
+    content: '';
+    border-top: 100px solid #cb0606;
+    border-right: 100px solid transparent;
+    border-left: 100px solid transparent;
+    transform-origin: top;
+    transition: transform 0.5s ease;
+}
+
+.cartaEscrita {
+    background-color: var(--corCoracaoVinil);
+    width: 100%;
 }
 
 @keyframes chacoalhar {
@@ -66,4 +74,103 @@ body {
     100% {
         transform: rotate(-30deg);
     }
+}
+
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(216, 92, 128, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    transition: opacity 0.5s ease-in;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+
+}
+
+.popup {
+    transform: translate(13%, 170%);
+    background-color: var(--rosacoracao0);
+    border-radius: 50px;
+    width: 285px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 20px 15px var(--rosacoracao1);
+}
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 23px;
+    color: #47101b;
+    margin-bottom: 30px;
+}
+
+.botoes {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    & button {
+        border: 1px solid var(--rosacoracao);
+        background-color: #f6d4e0;
+        padding: 10px;
+        width: 90px;
+        height: 2.3rem;
+        border-radius: 100px;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background-color: var(--rosacoracao);
+            border: 1px solid var(--rosacoracao2);
+            transition: 0.3s ease;
+            color: #f0f0f0;
+        }
+    }
+}
+
+.respostaErrada {
+    animation: chacoalhar2 0.28s ease-out;
+}
+
+@keyframes chacoalhar2 {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(8px);
+    }
+
+    40% {
+        transform: translateX(-8px);
+    }
+
+    60% {
+        transform: translateX(8px);
+    }
+
+    80% {
+        transform: translateX(-8px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+a{
+    text-decoration: none;
 }
