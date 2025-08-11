@@ -189,19 +189,19 @@ function previousMusic() {
 
 const imgsTv = [
     {
-        src: 'assets/imgs/imgsTvCam/daviAssistindoTV.jpg'
+        src: '../assets/imgs/imgsTvCam/daviAssistindoTV.jpg'
     },
     
     {
-        src: 'assets/imgs/nois/coresclaras.png'
+        src: '../assets/imgs/nois/coresclaras.png'
     },
     
     {
-        src: 'assets/imgs/nois/coresescuras.png'
+        src: '../assets/imgs/nois/coresescuras.png'
     },
     
     {
-        src: 'assets/imgs/imgsTvCam/daviNoMar.jpg'
+        src: '../assets/imgs/imgsTvCam/daviNoMar.jpg'
     }
 ];
 
