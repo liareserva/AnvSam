@@ -166,7 +166,7 @@ audio {
 }
 
 #numbers {
-    margin-top: 30px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -211,6 +211,7 @@ audio {
     display: flex;
     margin-left: 20px;
     margin-top: 45px;
+    margin-bottom: 10px;
     & img {
         width: 35px;
     }
@@ -234,15 +235,15 @@ ul {
     list-style: none;
 }
 
-.photo img {
+/* .photo img {
     position: absolute;
     content: '';
     width: 150px;
     height: 145px;
-    bottom: 590px;
+    top: 290px;
     left: 125px;
 }
-
+ */
 #tvtubinho {
     position: relative;
     width: 220px;
@@ -272,18 +273,18 @@ ul {
         content: '';
         width: 150px;
         height: 145px;
-        top: 590px;
+        top: 710px;
         left: 110px;
     }
 }
 
-@media screen and (max-width: 370px) {
+/* @media screen and (max-width: 413px) {
     .photo img {
         position: absolute;
         content: '';
         width: 150px;
         height: 145px;
-        top: 400px;
+        top: 720px;
         left: 103px;
     }
-}
+} */
